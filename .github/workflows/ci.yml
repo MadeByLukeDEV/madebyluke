@@ -65,4 +65,4 @@ jobs:
         run: npx prisma generate
 
       - name: Lint
-        run: npx next lint
+        run: npx eslint src --ext .ts,.tsx

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/app/api/auth/login-verify/route.ts
 import { verifyAuthenticationResponse } from "@simplewebauthn/server";
 import { prisma } from "@/lib/prisma";
@@ -19,7 +20,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Challenge expired" }, { status: 400 });
   }
 
-  // body.id from browser is base64url — matches how we stored it
   const credential = await prisma.passkeyCredential.findUnique({
     where: { credentialId: body.id },
   });
@@ -33,7 +33,8 @@ export async function POST(req: NextRequest) {
   await prisma.challenge.delete({ where: { id: challengeRecord.id } });
 
   try {
-    const verification = await verifyAuthenticationResponse({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const verification = await (verifyAuthenticationResponse as any)({
       response: body,
       expectedChallenge: challengeRecord.challenge,
       expectedOrigin: ORIGIN,
@@ -42,7 +43,7 @@ export async function POST(req: NextRequest) {
         credentialID: new Uint8Array(Buffer.from(credential.credentialId, "base64url")),
         credentialPublicKey: new Uint8Array(credential.publicKey),
         counter: Number(credential.counter),
-        transports: (credential.transports as AuthenticatorTransport[]) ?? [],
+        transports: (credential.transports as string[]) ?? [],
       },
       requireUserVerification: true,
     });
@@ -51,7 +52,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Verification failed" }, { status: 401 });
     }
 
-    // Update counter
     await prisma.passkeyCredential.update({
       where: { credentialId: credential.credentialId },
       data: {
@@ -66,6 +66,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ verified: true });
   } catch (error) {
     console.error("Login error:", error);
-    return NextResponse.json({ error: "Authentication failed" }, { status: 500 });
+    return NextResponse.json({ error: String(error) }, { status: 500 });
   }
 }

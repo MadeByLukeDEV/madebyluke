@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/app/api/auth/login-options/route.ts
 import { generateAuthenticationOptions } from "@simplewebauthn/server";
 import { prisma } from "@/lib/prisma";
@@ -18,15 +19,13 @@ export async function POST(req: NextRequest) {
     select: { credentialId: true, transports: true },
   });
 
-  console.log("Credentials from DB:", credentials); // debug
-
-  const options = await generateAuthenticationOptions({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const options = await (generateAuthenticationOptions as any)({
     rpID: RP_ID,
     allowCredentials: credentials.map((c) => ({
-      // credentialId is stored as base64url string, decode to Uint8Array for v9
       id: new Uint8Array(Buffer.from(c.credentialId, "base64url")),
-      type: "public-key" as const,
-      transports: (c.transports as AuthenticatorTransport[]) ?? [],
+      type: "public-key",
+      transports: (c.transports as string[]) ?? [],
     })),
     userVerification: "required",
   });

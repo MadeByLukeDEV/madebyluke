@@ -82,14 +82,20 @@ export function ContactSection() {
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "business@madebyluke.dev",
-                  href: "mailto:business@madebyluke.dev",
+                  value: "glukas250720@gmail.com",
+                  href: "mailto:glukas250720@gmail.com",
                 },
                 {
                   icon: Github,
                   label: "GitHub",
-                  value: "MadeByLukeDEV",
+                  value: "Madebyluke",
                   href: "https://github.com/MadeByLukeDEV",
+                },
+                {
+                  icon: Globe,
+                  label: "Website",
+                  value: "madebyluke.dev",
+                  href: "https://madebyluke.dev",
                 },
               ].map((item) => (
                 <a

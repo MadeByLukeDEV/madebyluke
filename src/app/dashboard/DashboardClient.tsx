@@ -1,6 +1,8 @@
 "use client";
 // src/app/dashboard/DashboardClient.tsx
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import {
   Plus, Trash2, Edit2, LogOut, Eye, EyeOff, Star, 
@@ -13,7 +15,9 @@ interface ProjectLink { label: string; url: string; }
 interface Project {
   id: string;
   title: string;
+  titleDe?: string | null;
   description: string;
+  descriptionDe?: string | null;
   coverUrl?: string | null;
   previewUrl?: string | null;
   links?: unknown;
@@ -80,9 +84,9 @@ export function DashboardClient({
   const openEdit = (project: Project) => {
     setForm({
       title: project.title,
-      titleDe: (project as any).titleDe ?? "",
+      titleDe: project.titleDe ?? "",
       description: project.description,
-      descriptionDe: (project as any).descriptionDe ?? "",
+      descriptionDe: project.descriptionDe ?? "",
       coverUrl: project.coverUrl ?? "",
       previewUrl: project.previewUrl ?? "",
       links: (project.links as ProjectLink[]) ?? [],
@@ -163,10 +167,10 @@ export function DashboardClient({
       {/* Header */}
       <header className="border-b border-[var(--border)] px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <a href="/" className="flex items-center gap-2 text-[var(--text-muted)] hover:text-accent-500 transition-colors text-sm">
+          <Link href="/" className="flex items-center gap-2 text-[var(--text-muted)] hover:text-accent-500 transition-colors text-sm">
             <ArrowLeft size={14} />
             Back to site
-          </a>
+          </Link>
           <span className="text-[var(--border)]">|</span>
           <h1 className="font-display font-bold text-lg">
             <span className="text-accent-500">made</span>byluke
@@ -222,9 +226,11 @@ export function DashboardClient({
               {projects.map((project) => (
                 <div key={project.id} className="surface-card p-4 group">
                   {project.coverUrl && (
-                    <img
+                    <Image
                       src={project.coverUrl}
                       alt={project.title}
+                      width={400}
+                      height={128}
                       className="w-full h-32 object-cover rounded-lg mb-3"
                     />
                   )}

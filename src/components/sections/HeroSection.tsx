@@ -2,7 +2,7 @@
 // src/components/sections/HeroSection.tsx
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
-import { ArrowDown, Github, ExternalLink, ArrowRight } from "lucide-react";
+import { ArrowDown, Github, ArrowRight, ExternalLink } from "lucide-react";
 
 const techStack = ["Next.js", "Node.js", "TypeScript", "TailwindCSS", "PHP", "MariaDB"];
 
@@ -126,7 +126,7 @@ export function HeroSection() {
                          bg-accent-500 text-black hover:bg-accent-400
                          transition-all duration-200 hover:scale-[1.03] active:scale-[0.97]"
             >
-              {t("explore")}
+              {t("cta")}
               <ArrowRight size={15} />
             </a>
             <a
@@ -157,11 +157,11 @@ export function HeroSection() {
             <ArrowDown size={14} className="text-accent-500" />
           </motion.div>
           <span className="text-xs font-mono text-[var(--text-muted)] tracking-widest uppercase">
-            {t("scroll")}
+            {t("explore")}
           </span>
           <div className="flex-1 h-px bg-[var(--border)]" />
           <span className="text-xs font-mono text-[var(--text-muted)]">
-            Vienna, AT · {new Date().getFullYear()}
+            Vienna, AT · 2025
           </span>
         </motion.div>
       </div>

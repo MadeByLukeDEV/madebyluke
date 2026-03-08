@@ -1,6 +1,7 @@
 "use client";
 // src/app/dashboard/login/LoginClient.tsx
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { startAuthentication, startRegistration } from "@simplewebauthn/browser";
 import { motion } from "motion/react";
 import { Fingerprint, ArrowLeft, Shield } from "lucide-react";
@@ -112,13 +113,13 @@ export function LoginClient() {
         transition={{ duration: 0.6 }}
         className="relative z-10 surface-card p-8 w-full max-w-sm"
       >
-        <a
+        <Link
           href="/"
           className="flex items-center gap-2 text-xs text-[var(--text-muted)] hover:text-accent-500 transition-colors mb-6"
         >
           <ArrowLeft size={12} />
           Back to site
-        </a>
+        </Link>
 
         <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-10 rounded-xl bg-accent-500/10 border border-accent-500/30 flex items-center justify-center">

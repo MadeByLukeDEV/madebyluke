@@ -1,5 +1,6 @@
 "use client";
 // src/components/sections/ProjectsSection.tsx
+import NextImage from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
@@ -42,7 +43,6 @@ function ProjectSkeleton() {
 }
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
-  const t = useTranslations("projects");
   const locale = useLocale();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
@@ -64,11 +64,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       {/* Cover image */}
       <div className="relative h-48 bg-[var(--bg-surface2)] overflow-hidden">
         {project.coverUrl ? (
-          <img
-            src={project.coverUrl}
-            alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
+          <NextImage src={project.coverUrl} alt={project.title} width={800} height={450} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
             <div className="text-[var(--text-muted)] opacity-30">
