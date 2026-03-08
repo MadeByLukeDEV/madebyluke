@@ -1,0 +1,54 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id            String   @id @default(cuid())
+  title         String
+  titleDe       String?
+  description   String   @db.Text
+  descriptionDe String?  @db.Text
+  coverUrl      String?
+  previewUrl  String?
+  links       Json?    // Array of {label, url}
+  tags        Json?    // Array of strings
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model PasskeyCredential {
+  id           String   @id @default(cuid())
+  credentialId String   @unique
+  publicKey    Bytes
+  counter      BigInt
+  deviceType   String?
+  backedUp     Boolean  @default(false)
+  transports   Json?
+  createdAt    DateTime @default(now())
+  lastUsed     DateTime @default(now())
+}
+
+model Challenge {
+  id        String   @id @default(cuid())
+  challenge String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String   @db.Text
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "toggleTheme": "Toggle theme",
+    "toggleLang": "DE"
+  },
+  "hero": {
+    "role": "Junior Fullstack Web Developer",
+    "tagline": "Building clean, fast, and modern web experiences — from pixel-perfect frontends to robust backends.",
+    "cta": "See my work",
+    "ctaContact": "Get in touch",
+    "scroll": "Scroll to explore",
+    "explore": "Explore Work"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "A bit about who I am",
+    "bio": "I'm a Vienna-based Junior Fullstack Developer with a passion for clean code, automation, and performance optimization. I combine creative media skills with technical expertise in modern web development — from responsive frontends to CI/CD pipelines.",
+    "bio2": "Currently preparing for my final apprenticeship exam while deepening expertise in Node.js, server automation, and modern JavaScript frameworks.",
+    "strengths": "Strengths",
+    "strengthsList": ["Clean Code", "Automation", "Performance", "Responsive Design", "Team Collaboration", "Fast Learner"],
+    "languages": "Languages",
+    "languageGer": "German",
+    "languageEng": "English",
+    "skills": "Skills & Technologies"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Things I've built",
+    "noProjects": "No projects yet. Check back soon!",
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo",
+    "viewProject": "View Project"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "description": "Have a project in mind, want to collaborate, or just want to say hi? Feel free to reach out! I look forward to connecting with you.",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again.",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "john@example.com",
+    "messagePlaceholder": "Tell me about your project or just say hi..."
+  },
+  "footer": {
+    "made": "Made with",
+    "by": "by Luke",
+    "rights": "All rights reserved."
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My journey so far",
+    "entries": [
+      {
+        "date": "Jan 2025 – Present",
+        "title": "Seeking Employment & Further Education",
+        "company": "Self-directed",
+        "bullets": [
+          "Preparing for final apprenticeship exam (Lehrabschlussprüfung)",
+          "Deepening expertise in CI/CD, Node.js, and server automation"
+        ]
+      },
+      {
+        "date": "Aug 2024 – Jan 2025",
+        "title": "Junior Fullstack Web Developer",
+        "company": "MyPoppies GmbH",
+        "bullets": [
+          "Built responsive landing pages with HTML, SCSS, TailwindCSS",
+          "Rebuilt a Next.js web application in a full code modernization",
+          "Implemented automated CI/CD via GitHub Actions & Caddy Server"
+        ]
+      },
+      {
+        "date": "Jan 2023 – Aug 2023",
+        "title": "Family Caregiving",
+        "company": "Personal",
+        "bullets": [
+          "Full-time care for grandmother — organized daily routines and medical matters",
+          "Developed resilience, reliability, and calm problem-solving under pressure"
+        ]
+      },
+      {
+        "date": "May 2022 – Nov 2022",
+        "title": "Digitalization Specialist",
+        "company": "Reisswolf Austria GmbH",
+        "bullets": [
+          "Digitized and archived physical documents",
+          "Quality control, scanning & GDPR-compliant indexing"
+        ]
+      },
+      {
+        "date": "Feb 2017 – Aug 2020",
+        "title": "Apprenticeship — Media Technician",
+        "company": "Ipcenter GmbH",
+        "bullets": [
+          "Created and maintained websites with HTML, CSS, JavaScript",
+          "Video post-production with Adobe Premiere Pro & After Effects",
+          "Built a render farm to optimize processing workflows"
+        ]
+      }
+    ]
+  },
+  "skeleton": {
+    "loading": "Loading..."
+  }
+}

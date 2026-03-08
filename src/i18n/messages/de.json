@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "toggleTheme": "Theme wechseln",
+    "toggleLang": "EN"
+  },
+  "hero": {
+    "role": "Junior Fullstack Web Developer",
+    "tagline": "Ich entwickle saubere, schnelle und moderne Web-Erlebnisse — von pixel-perfekten Frontends bis zu robusten Backends.",
+    "cta": "Meine Arbeit",
+    "ctaContact": "Kontakt aufnehmen",
+    "scroll": "Entdecke mehr",
+    "explore": "Meine Arbeit"
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Ein bisschen über mich",
+    "bio": "Ich bin ein in Wien ansässiger Junior Fullstack Developer mit einer Leidenschaft für Clean Code, Automatisierung und Performance-Optimierung. Ich kombiniere kreative Medienkompetenz mit technischer Expertise in moderner Webentwicklung — von responsiven Frontends bis zu CI/CD-Pipelines.",
+    "bio2": "Aktuell bereite ich mich auf meine Lehrabschlussprüfung vor und vertiefe meine Kenntnisse in Node.js, Serverautomatisierung und modernen JavaScript-Frameworks.",
+    "strengths": "Stärken",
+    "strengthsList": ["Clean Code", "Automatisierung", "Performance", "Responsive Design", "Teamarbeit", "Schnelle Einarbeitung"],
+    "languages": "Sprachen",
+    "languageGer": "Deutsch",
+    "languageEng": "Englisch",
+    "skills": "Skills & Technologien"
+  },
+  "projects": {
+    "title": "Projekte",
+    "subtitle": "Was ich gebaut habe",
+    "noProjects": "Noch keine Projekte. Schau bald wieder vorbei!",
+    "viewCode": "Code ansehen",
+    "liveDemo": "Live Demo",
+    "viewProject": "Projekt ansehen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Lass uns zusammenarbeiten",
+    "description": "Du hast ein Projekt geplant, Lust auf eine Zusammenarbeit oder willst einfach mal Hallo sagen? Schreib mir einfach! Ich freue mich darauf, von dir zu hören",
+    "name": "Dein Name",
+    "email": "Deine E-Mail",
+    "message": "Deine Nachricht",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht gesendet! Ich melde mich bald.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "namePlaceholder": "Max Mustermann",
+    "emailPlaceholder": "max@beispiel.de",
+    "messagePlaceholder": "Erzähl mir von deinem Projekt oder sag einfach Hallo..."
+  },
+  "footer": {
+    "made": "Gemacht mit",
+    "by": "von Lukas",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "experience": {
+    "title": "Erfahrung",
+    "subtitle": "Mein bisheriger Werdegang",
+    "entries": [
+      {
+        "date": "Jan 2025 – lfd.",
+        "title": "Arbeitsuchend & Fortbildung",
+        "company": "Selbstständig",
+        "bullets": [
+          "Vorbereitung auf die Lehrabschlussprüfung",
+          "Vertiefung in CI/CD, Node.js und Serverautomatisierung"
+        ]
+      },
+      {
+        "date": "Aug 2024 – Jan 2025",
+        "title": "Junior Fullstack Web Developer",
+        "company": "MyPoppies GmbH",
+        "bullets": [
+          "Entwicklung responsiver Landing Pages mit HTML, SCSS und TailwindCSS",
+          "Neuentwicklung einer Next.js-Webanwendung im Rahmen einer vollständigen Code-Modernisierung",
+          "Aufbau automatisierter CI/CD-Prozesse via GitHub Actions & Caddy Server"
+        ]
+      },
+      {
+        "date": "Jan 2023 – Aug 2023",
+        "title": "Pflege eines Familienmitglieds",
+        "company": "Persönlich",
+        "bullets": [
+          "Vollzeitbetreuung der Großmutter — Organisation des Alltags und medizinischer Angelegenheiten",
+          "Entwicklung von Resilienz, Zuverlässigkeit und ruhiger Problemlösung unter Druck"
+        ]
+      },
+      {
+        "date": "Mai 2022 – Nov 2022",
+        "title": "Digitalisierungsspezialist",
+        "company": "Reisswolf Austria GmbH",
+        "bullets": [
+          "Digitalisierung und Archivierung physischer Dokumente",
+          "Qualitätskontrolle, Scannen & DSGVO-konforme Indexierung"
+        ]
+      },
+      {
+        "date": "Feb 2017 – Aug 2020",
+        "title": "Ausbildung — Medientechniker",
+        "company": "Ipcenter GmbH",
+        "bullets": [
+          "Erstellung und Pflege von Webseiten mit HTML, CSS, JavaScript",
+          "Video-Postproduktion mit Adobe Premiere Pro & After Effects",
+          "Aufbau einer Renderfarm zur Prozessoptimierung"
+        ]
+      }
+    ]
+  },
+  "skeleton": {
+    "loading": "Lädt..."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "toggleTheme": "Theme wechseln",
+    "toggleLang": "EN"
+  },
+  "hero": {
+    "greeting": "Hey, ich bin",
+    "name": "Lukas Graf",
+    "role": "Junior Fullstack Web Developer",
+    "tagline": "Ich entwickle saubere, schnelle und moderne Web-Erlebnisse — von pixel-perfekten Frontends bis zu robusten Backends.",
+    "cta": "Meine Arbeit",
+    "ctaContact": "Kontakt aufnehmen"
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Ein bisschen über mich",
+    "bio": "Ich bin ein in Wien ansässiger Junior Fullstack Developer mit einer Leidenschaft für Clean Code, Automatisierung und Performance-Optimierung. Ich kombiniere kreative Medienkompetenz mit technischer Expertise in moderner Webentwicklung — von responsiven Frontends bis zu CI/CD-Pipelines.",
+    "bio2": "Aktuell bereite ich mich auf meine Lehrabschlussprüfung vor und vertiefe meine Kenntnisse in Node.js, Serverautomatisierung und modernen JavaScript-Frameworks.",
+    "strengths": "Stärken",
+    "strengthsList": ["Clean Code", "Automatisierung", "Performance", "Responsive Design", "Teamarbeit", "Schnelle Einarbeitung"],
+    "languages": "Sprachen",
+    "skills": "Skills & Technologien"
+  },
+  "projects": {
+    "title": "Projekte",
+    "subtitle": "Was ich gebaut habe",
+    "noProjects": "Noch keine Projekte. Schau bald wieder vorbei!",
+    "viewCode": "Code ansehen",
+    "liveDemo": "Live Demo",
+    "viewProject": "Projekt ansehen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Lass uns zusammenarbeiten",
+    "description": "Du hast ein Projekt geplant, Lust auf eine Zusammenarbeit oder willst einfach mal Hallo sagen? Schreib mir einfach! Ich freue mich darauf, von dir zu hören",
+    "name": "Dein Name",
+    "email": "Deine E-Mail",
+    "message": "Deine Nachricht",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht gesendet! Ich melde mich bald.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "namePlaceholder": "Max Mustermann",
+    "emailPlaceholder": "max@beispiel.de",
+    "messagePlaceholder": "Erzähl mir von deinem Projekt oder sag einfach Hallo..."
+  },
+  "footer": {
+    "made": "Gemacht mit",
+    "by": "von Lukas",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "experience": {
+    "title": "Erfahrung",
+    "subtitle": "Mein bisheriger Werdegang"
+  },
+  "skeleton": {
+    "loading": "Lädt..."
+  }
+}
