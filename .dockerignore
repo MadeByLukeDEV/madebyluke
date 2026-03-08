@@ -1,0 +1,22 @@
+# Build artifacts
+.next/
+node_modules/
+
+# Git
+.git/
+.github/
+
+# Secrets — never copy into image
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Docs
+*.md
+README*
+
+# Dev tools
+setup-local.sh
+docker-compose*
+Dockerfile.dev

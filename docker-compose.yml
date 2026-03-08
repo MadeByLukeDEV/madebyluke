@@ -1,0 +1,61 @@
+# docker-compose.yml — Local development
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount full source for hot reload
+      - .:/app
+      # Keep node_modules and .next from container, not host
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+    env_file:
+      - .env.local
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: mariadb:11
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: madebyluke_dev
+      MYSQL_USER: madebyluke
+      MYSQL_PASSWORD: madebyluke
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  db-studio:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - .env.local
+    command: npx prisma studio
+    ports:
+      - "5555:5555"
+    depends_on:
+      db:
+        condition: service_healthy
+    profiles:
+      - studio
+
+volumes:
+  db_data:
