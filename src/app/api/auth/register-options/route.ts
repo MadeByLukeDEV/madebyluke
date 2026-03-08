@@ -26,7 +26,8 @@ export async function POST(req: NextRequest) {
   const options = await generateRegistrationOptions({
     rpName: RP_NAME,
     rpID: RP_ID,
-    userID: new TextEncoder().encode("admin-madebyluke"),
+    // v9 types say string but runtime needs Uint8Array — cast to bypass
+    userID: new TextEncoder().encode("admin-madebyluke") as unknown as string,
     userName: "admin@madebyluke.dev",
     userDisplayName: "Lukas Graf",
     attestationType: "none",

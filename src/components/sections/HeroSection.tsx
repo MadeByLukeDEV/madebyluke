@@ -130,7 +130,7 @@ export function HeroSection() {
               <ArrowRight size={15} />
             </a>
             <a
-              href="https://github.com/AboutSelphy"
+              href="https://github.com/MadeByLukeDEV"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-11 h-11 rounded-xl text-sm

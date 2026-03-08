@@ -88,8 +88,8 @@ export function ContactSection() {
                 {
                   icon: Github,
                   label: "GitHub",
-                  value: "AboutSelphy",
-                  href: "https://github.com/AboutSelphy",
+                  value: "MadeByLukeDEV",
+                  href: "https://github.com/MadeByLukeDEV",
                 },
               ].map((item) => (
                 <a
