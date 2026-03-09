@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/app/api/auth/login-options/route.ts
 import { generateAuthenticationOptions } from "@simplewebauthn/server";
 import { prisma } from "@/lib/prisma";
@@ -19,8 +18,7 @@ export async function POST(req: NextRequest) {
     select: { credentialId: true, transports: true },
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const options = await (generateAuthenticationOptions as any)({
+    const options = await (generateAuthenticationOptions as any)({
     rpID: RP_ID,
     allowCredentials: credentials.map((c) => ({
       id: new Uint8Array(Buffer.from(c.credentialId, "base64url")),

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/app/api/auth/login-verify/route.ts
 import { verifyAuthenticationResponse } from "@simplewebauthn/server";
 import { prisma } from "@/lib/prisma";
@@ -33,8 +32,7 @@ export async function POST(req: NextRequest) {
   await prisma.challenge.delete({ where: { id: challengeRecord.id } });
 
   try {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const verification = await (verifyAuthenticationResponse as any)({
+        const verification = await (verifyAuthenticationResponse as any)({
       response: body,
       expectedChallenge: challengeRecord.challenge,
       expectedOrigin: ORIGIN,

@@ -6,11 +6,16 @@ import { getSession } from "@/lib/auth";
 
 // GET - public
 export async function GET() {
-  const projects = await prisma.project.findMany({
-    where: { published: true },
-    orderBy: [{ featured: "desc" }, { order: "asc" }, { createdAt: "desc" }],
-  });
-  return NextResponse.json(projects);
+  try {
+    const projects = await prisma.project.findMany({
+      where: { published: true },
+      orderBy: [{ featured: "desc" }, { order: "asc" }, { createdAt: "desc" }],
+    });
+    return NextResponse.json(projects);
+  } catch {
+    // DB not ready yet (e.g. during build time) — return empty list gracefully
+    return NextResponse.json([]);
+  }
 }
 
 // POST - admin only

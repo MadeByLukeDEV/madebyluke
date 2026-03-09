@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/app/api/auth/register-options/route.ts
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { generateRegistrationOptions } from "@simplewebauthn/server";
 import { prisma } from "@/lib/prisma";
 import { rateLimit } from "@/lib/rateLimit";
@@ -27,8 +25,7 @@ export async function POST(req: NextRequest) {
   }
 
   // v9 types are inconsistent — cast everything to any to avoid build errors
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const options = await (generateRegistrationOptions as any)({
+    const options = await (generateRegistrationOptions as any)({
     rpName: RP_NAME,
     rpID: RP_ID,
     userID: new TextEncoder().encode("admin-madebyluke"),

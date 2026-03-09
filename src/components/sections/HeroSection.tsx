@@ -2,6 +2,7 @@
 // src/components/sections/HeroSection.tsx
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { ArrowDown, Github, ArrowRight, ExternalLink } from "lucide-react";
 
 const techStack = ["Next.js", "Node.js", "TypeScript", "TailwindCSS", "PHP", "MariaDB"];
@@ -126,11 +127,11 @@ export function HeroSection() {
                          bg-accent-500 text-black hover:bg-accent-400
                          transition-all duration-200 hover:scale-[1.03] active:scale-[0.97]"
             >
-              {t("cta")}
+              Explore Work
               <ArrowRight size={15} />
             </a>
             <a
-              href="https://github.com/MadeByLukeDEV"
+              href="https://github.com/AboutSelphy"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-11 h-11 rounded-xl text-sm
@@ -139,6 +140,17 @@ export function HeroSection() {
                          text-[var(--text-muted)] hover:text-accent-500"
             >
               <Github size={16} />
+            </a>
+            <a
+              href="https://aboutselphy.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-11 h-11 rounded-xl text-sm
+                         border border-[var(--border)] bg-[var(--bg-surface)]
+                         hover:border-accent-500/50 transition-all duration-200 hover:scale-[1.03]
+                         text-[var(--text-muted)] hover:text-accent-500"
+            >
+              <ExternalLink size={16} />
             </a>
           </div>
         </motion.div>
@@ -157,7 +169,7 @@ export function HeroSection() {
             <ArrowDown size={14} className="text-accent-500" />
           </motion.div>
           <span className="text-xs font-mono text-[var(--text-muted)] tracking-widest uppercase">
-            {t("explore")}
+            Scroll to explore
           </span>
           <div className="flex-1 h-px bg-[var(--border)]" />
           <span className="text-xs font-mono text-[var(--text-muted)]">
