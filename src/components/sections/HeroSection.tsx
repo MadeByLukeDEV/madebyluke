@@ -1,14 +1,11 @@
 "use client";
 // src/components/sections/HeroSection.tsx
-import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { ArrowDown, Github, ArrowRight, ExternalLink } from "lucide-react";
 
 const techStack = ["Next.js", "Node.js", "TypeScript", "TailwindCSS", "PHP", "MariaDB"];
 
 export function HeroSection() {
-  const t = useTranslations("hero");
 
   return (
     <section
