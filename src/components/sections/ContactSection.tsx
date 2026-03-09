@@ -82,8 +82,8 @@ export function ContactSection() {
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "glukas250720@gmail.com",
-                  href: "mailto:glukas250720@gmail.com",
+                  value: "business@madebyluke.dev",
+                  href: "mailto:business@madebyluke.dev",
                 },
                 {
                   icon: Github,
