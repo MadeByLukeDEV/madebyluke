@@ -2,6 +2,8 @@
 // src/components/sections/HeroSection.tsx
 import { motion } from "motion/react";
 import { ArrowDown, Github, ArrowRight, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 const techStack = ["Next.js", "Node.js", "TypeScript", "TailwindCSS", "PHP", "MariaDB"];
 
@@ -48,7 +50,7 @@ export function HeroSection() {
               className="w-16 h-16 rounded-full border border-[var(--border)] flex items-center justify-center
                          bg-[var(--bg-surface)]"
             >
-              <span className="font-display font-black text-xl text-accent-500">ML</span>
+              <Image src="/madebyluke_logo.svg" alt="madebyluke Logo" width={32} height={32} className=" inline-flex"/>
             </div>
           </div>
         </div>
@@ -118,7 +120,7 @@ export function HeroSection() {
 
           {/* CTAs */}
           <div className="flex items-center gap-3 flex-shrink-0">
-            <a
+            <Link
               href="#projects"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold
                          bg-accent-500 text-black hover:bg-accent-400
@@ -126,9 +128,9 @@ export function HeroSection() {
             >
               Explore Work
               <ArrowRight size={15} />
-            </a>
-            <a
-              href="https://github.com/AboutSelphy"
+            </Link>
+            <Link
+              href="https://github.com/MadeByLukeDEV"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-11 h-11 rounded-xl text-sm
@@ -137,8 +139,8 @@ export function HeroSection() {
                          text-[var(--text-muted)] hover:text-accent-500"
             >
               <Github size={16} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://aboutselphy.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -148,7 +150,7 @@ export function HeroSection() {
                          text-[var(--text-muted)] hover:text-accent-500"
             >
               <ExternalLink size={16} />
-            </a>
+            </Link>
           </div>
         </motion.div>
 
@@ -170,7 +172,7 @@ export function HeroSection() {
           </span>
           <div className="flex-1 h-px bg-[var(--border)]" />
           <span className="text-xs font-mono text-[var(--text-muted)]">
-            Vienna, AT · 2025
+            Vienna, AT · {new Date().getFullYear()}
           </span>
         </motion.div>
       </div>

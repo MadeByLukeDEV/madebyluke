@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef, useState } from "react";
 import { Send, Mail, Github, Globe } from "lucide-react";
+import Link from "next/link";
 
 export function ContactSection() {
   const t = useTranslations("contact");
@@ -98,7 +99,7 @@ export function ContactSection() {
                   href: "https://madebyluke.dev",
                 },
               ].map((item) => (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   target="_blank"
@@ -115,7 +116,7 @@ export function ContactSection() {
                       {item.value}
                     </p>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
@@ -168,7 +169,7 @@ export function ContactSection() {
                   {t("message")}
                 </label>
                 <textarea
-                  className="input-field min-h-[140px] resize-y"
+                  className="input-field min-h-[140px] resize-y max-h-[613px]"
                   placeholder={t("messagePlaceholder")}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}

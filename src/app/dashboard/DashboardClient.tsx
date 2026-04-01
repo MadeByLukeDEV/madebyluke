@@ -293,12 +293,12 @@ export function DashboardClient({
                   <div className="flex items-start justify-between gap-4 mb-2">
                     <div>
                       <span className="font-medium">{msg.name}</span>
-                      <a
+                      <Link
                         href={`mailto:${msg.email}`}
                         className="ml-2 text-sm text-accent-500 hover:underline"
                       >
                         {msg.email}
-                      </a>
+                      </Link>
                     </div>
                     <span className="text-xs text-[var(--text-muted)] font-mono whitespace-nowrap">
                       {new Date(msg.createdAt).toLocaleDateString()}

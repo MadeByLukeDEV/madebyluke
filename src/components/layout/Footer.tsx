@@ -2,6 +2,7 @@
 // src/components/layout/Footer.tsx
 import { useTranslations } from "next-intl";
 import { Heart } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -19,12 +20,12 @@ export function Footer() {
           madebyluke.dev · {new Date().getFullYear()} · {t("rights")}
         </p>
 
-        <a
+        <Link
           href="/dashboard"
           className="text-xs text-[var(--text-muted)] hover:text-accent-500 transition-colors font-mono"
         >
           admin ↗
-        </a>
+        </Link>
       </div>
     </footer>
   );

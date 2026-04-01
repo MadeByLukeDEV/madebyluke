@@ -35,7 +35,7 @@ export function ExperienceSection() {
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-[21px] md:left-[27px] top-0 bottom-0 w-px bg-[var(--border)]" />
+          <div className="absolute left-[21px] md:left-[21.5px] top-0 bottom-0 w-px bg-[var(--border)]" />
           <div className="space-y-8">
             {entries.map((exp, i) => {
               const Icon = icons[i] ?? Briefcase;
@@ -47,7 +47,7 @@ export function ExperienceSection() {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="relative flex gap-6 md:gap-8"
                 >
-                  <div className={`relative z-10 flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center border-2 ${i === 0 ? "border-accent-500 bg-accent-500/10 text-accent-500" : "border-[var(--border)] bg-[var(--bg)] text-[var(--text-muted)]"}`}>
+                  <div className={`relative z-10 flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center border-2 ${i === 0 ? "border-accent-500 bg-[var(--bg)]  text-accent-500" : "border-[var(--border)] bg-[var(--bg)] text-[var(--text-muted)]"}`}>
                     <Icon size={16} />
                   </div>
                   <div className="surface-card p-5 flex-1 -mt-1">

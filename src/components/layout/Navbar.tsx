@@ -6,6 +6,8 @@ import { useTheme } from "next-themes";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import Image from 'next/image'
 
 export function Navbar() {
   const t = useTranslations("nav");
@@ -48,22 +50,23 @@ export function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a
+        <Link
           href="#"
           className="font-display font-bold text-lg tracking-tight hover:text-accent-500 transition-colors"
         >
+          <Image src="/madebyluke_logo.svg" alt="madebyluke Logo" width={32} height={32} className=" inline-flex gap-5 mr-2"/>
           <span className="text-accent-500">made</span>
           <span>by</span>
           <span className="text-accent-500">luke</span>
           <span className="text-[var(--text-muted)]">.dev</span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="nav-link text-[var(--text-muted)]">
+            <Link key={item.href} href={item.href} className="nav-link text-[var(--text-muted)]">
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -110,14 +113,14 @@ export function Navbar() {
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
                   className="text-[var(--text-muted)] hover:text-accent-500 transition-colors font-medium"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <button
                 onClick={toggleLang}

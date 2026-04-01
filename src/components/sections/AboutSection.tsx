@@ -7,9 +7,9 @@ import { useRef } from "react";
 
 const skills = {
   Frontend: ["Next.js", "Vue.js", "Angular", "TailwindCSS", "SCSS/SASS", "TypeScript"],
-  Backend: ["Node.js", "Express", "NestJS", "PHP", "Laravel", "REST APIs"],
+  Backend: ["Node.js", "Express", "NestJS", "PHP", "Laravel", "REST APIs", "Webhook", "Websockets"],
   Database: ["MySQL", "MariaDB", "MongoDB", "PostgreSQL"],
-  "DevOps/CI·CD": ["GitHub Actions", "Docker", "Coolify", "Caddy", "Proxmox"],
+  "DevOps/CI·CD": ["GitHub Actions", "Docker", "Coolify", "Caddy","Traefik", "Proxmox"],
   CMS: ["WordPress"],
 };
 

@@ -24,6 +24,7 @@
     --text-muted: #6b6b65;
     --border: rgba(255, 255, 255, 0.06);
     --shadow: rgba(0, 0, 0, 0.5);
+    --accent: #00c785;
   }
 
   * {
@@ -67,7 +68,6 @@
   .accent-border {
     border-color: var(--accent);
   }
-
   .surface-card {
     background: var(--bg-surface);
     border: 1px solid var(--border);
@@ -136,6 +136,7 @@
            focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent
            transition-all duration-200 font-body text-sm;
   }
+
 }
 
 @keyframes shimmer {
@@ -156,8 +157,8 @@
 /* Grid background pattern for hero */
 .grid-bg {
   background-image: 
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    linear-gradient(var(--border) 2px, transparent 1px),
+    linear-gradient(90deg, var(--border) 2px, transparent 1px);
   background-size: 60px 60px;
 }
 

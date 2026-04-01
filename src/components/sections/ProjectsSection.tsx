@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef, useEffect, useState } from "react";
 import { ExternalLink, Github, Star } from "lucide-react";
+import Link from "next/link";
 
 interface ProjectLink {
   label: string;
@@ -114,7 +115,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               const isGithub = link.label.toLowerCase().includes("github") ||
                                link.url.includes("github.com");
               return (
-                <a
+                <Link
                   key={link.url}
                   href={link.url}
                   target="_blank"
@@ -124,7 +125,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 >
                   {isGithub ? <Github size={12} /> : <ExternalLink size={12} />}
                   {link.label}
-                </a>
+                </Link>
               );
             })}
           </div>
