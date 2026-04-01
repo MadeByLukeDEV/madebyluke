@@ -99,22 +99,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
   const messages = await getMessages();
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Lukas Graf",
-    url: "https://madebyluke.dev",
-    jobTitle: "Fullstack Web Developer",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Vienna",
-      addressCountry: "Austria",
-    },
-    sameAs: [
-      "https://github.com/madebylukedev",
-      "https://twitter.com/aboutselphy"
-    ],
-  };
+
 
   return (
     
